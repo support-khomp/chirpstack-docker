@@ -15,7 +15,7 @@ services:
     ports:
       - 8080:8080
 
-  chirpstack-gateway-bridge-au915:
+  chirpstack-gateway-bridge:
     image: chirpstack/chirpstack-gateway-bridge:4.0.0-rc.1
     ports:
       - 1700:1700/udp
