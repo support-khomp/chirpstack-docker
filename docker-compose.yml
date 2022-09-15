@@ -2,7 +2,7 @@ version: "3"
 
 services:
   chirpstack:
-    image: chirpstack/chirpstack:4.0.0-rc.2
+    image: chirpstack/chirpstack:4.0.0
     command: -c /etc/chirpstack
     restart: unless-stopped
     volumes:
@@ -12,11 +12,15 @@ services:
       - postgres
       - mosquitto
       - redis
+    environment:
+      - MQTT_BROKER_HOST=mosquitto
+      - REDIS_HOST=redis
+      - POSTGRESQL_HOST=postgres
     ports:
       - 8080:8080
 
   chirpstack-gateway-bridge:
-    image: chirpstack/chirpstack-gateway-bridge:4.0.0-rc.1
+    image: chirpstack/chirpstack-gateway-bridge:4.0.0
     ports:
       - 1700:1700/udp
     volumes:
@@ -25,7 +29,7 @@ services:
       - mosquitto
 
   chirpstack-rest-api:
-    image: chirpstack/chirpstack-rest-api:4.0.0-rc.1
+    image: chirpstack/chirpstack-rest-api:4.0.0
     command: --server chirpstack:8080 --bind 0.0.0.0:8090 --insecure
     ports:
       - 8090:8090
