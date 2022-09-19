@@ -16,17 +16,10 @@ but keep in mind that for production usage it might need modifications.
 
 ## Configuration
 
-This setup is pre-configured for all regions. You can either connect a ChirpStack Gateway Bridge
-instance (v3.14.0+) to the MQTT broker (port 1883) or connect a Semtech UDP Packet Forwarder.
-Please note that:
+This setup is pre-configured for **AU915** region. 
 
-* You must prefix the MQTT topic with the region
-  Please see the region configuration files in the `configuration/chirpstack` for a list
-  of topic prefixes (e.g. eu868, us915_0, au915, as923_2, ...).
-* The protobuf marshaler is configured.
-
-This setup also comes with a ChirpStack Gateway Bridge instance which is configured to the
-eu868 topic prefix. You can connect your UDP packet-forwarder based gateway to port 1700.
+This setup comes with a ChirpStack Gateway Bridge instance which is configured to the
+au915 topic prefix. You can connect your **ITG 200** UDP packet-forwarder based gateway to **port 1700**.
 
 # Data persistence
 
@@ -38,17 +31,16 @@ PostgreSQL and Redis data is persisted in Docker volumes, see the `docker-compos
 Before using this `docker-compose.yml` file, make sure you have [Docker](https://www.docker.com/community-edition)
 installed.
 
-## Importing TTN device repository
+## Importing Khomp LoRaWAN Device repository
 
-To import the TTN [lorawan-devices](https://github.com/TheThingsNetwork/lorawan-devices)
+To import the [khomp-lorawan-devices](https://github.com/support-khomp/khomp-lorawan-devices)
 repository (optional step), run the following command:
 
 ```bash
 make import-lorawan-devices
 ```
 
-This will clone the `lorawan-devices` repository and execute the `import-ttn-lorawan-devices`
-command of ChirpStack. Please note that for this step, you need to have the `git` and `make`
+This will clone the `khomp-lorawan-devices` repository. Please note that for this step, you need to have the `git` and `make`
 commands installed.
 
 ## Usage
