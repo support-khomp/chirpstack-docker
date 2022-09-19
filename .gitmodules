@@ -1,0 +1,3 @@
+[submodule "lorawan-devices/vendor/khomp-lorawan-devices"]
+	path = lorawan-devices/vendor/khomp-lorawan-devices
+	url = https://github.com/support-khomp/khomp-lorawan-devices.git
