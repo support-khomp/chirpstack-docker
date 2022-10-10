@@ -5,4 +5,4 @@ import-lorawan-devices:
 	
 set_token:
     sed -i 's/PASSWORD_PLACEHOLDER/$(TOKEN)/g' ./configuration/chirpstack/chirpstack.toml
-    sed -i 's/ # enabled=[\"mqtt\"]/enabled=[\"mqtt\"]/g' ./configuration/chirpstack/chirpstack.toml
+    sed -i 's/ \# enabled=\[\"mqtt\"\]/enabled=\[\"mqtt\"\]/g' ./configuration/chirpstack/chirpstack.toml
