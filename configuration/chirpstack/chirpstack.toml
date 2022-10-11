@@ -350,7 +350,7 @@
     username=""
 
     # Connect with the given password (optional)
-    password=""
+    password="PASSWORD_PLACEHOLDER"
 
     # Quality of service level
     #
