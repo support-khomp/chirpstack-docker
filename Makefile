@@ -1,3 +1,6 @@
+make docker:
+     docker-compose up
+
 import-lorawan-devices:
 	rm -rf lorawan-devices
 	git clone https://github.com/support-khomp/khomp-lorawan-devices.git lorawan-devices
