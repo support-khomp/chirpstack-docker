@@ -37,7 +37,7 @@ To import the [khomp-lorawan-devices](https://github.com/support-khomp/khomp-lor
 repository (optional step), run the following command:
 
 ```bash
-make import-lorawan-devices
+make import
 ```
 
 This will clone the `khomp-lorawan-devices` repository. Please note that for this step, you need to have the `git` and `make`
@@ -46,6 +46,12 @@ commands installed.
 ## Usage
 
 To start the ChirpStack simply run:
+
+```bash
+$ make docker
+```
+
+or
 
 ```bash
 $ docker-compose up
