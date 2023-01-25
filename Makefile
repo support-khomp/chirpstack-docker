@@ -6,7 +6,7 @@ import:
 	apt-get update && \
 	apt-get install -y make git && \
 	git clone https://github.com/support-khomp/khomp-lorawan-devices.git /tmp/lorawan-devices && \
-	chirpstack -c /etc/chirpstack import-ttn-lorawan-devices -d /tmp/lorawan-devices'
+	chirpstack -c /etc/chirpstack import-legacy-lorawan-devices-repository -d /tmp/lorawan-devices'
 
 token:
 	sed -i 's/PASSWORD_PLACEHOLDER/$(TOKEN)/g' ./configuration/chirpstack/chirpstack.toml
