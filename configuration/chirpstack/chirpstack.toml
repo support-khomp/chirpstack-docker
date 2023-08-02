@@ -280,7 +280,17 @@
     # used. For example when only using the first 8 channels of the US band.
     # Note: when left blank / empty array, all channels will be enabled.
     enabled_uplink_channels=[0, 1, 2, 3, 4, 5, 6, 7, 64]
-
+    
+    # Enforce 400ms dwell time.
+    #
+    # Some regions require the configuration of the dwell time, which will
+    # limit the time-on-air to 400ms. Please refer to the LoRaWAN Regional
+    # Parameters specification for more information.
+    #
+    # When configured and required in the configured region, ChirpStack Network Server will
+    # use the TxParamSetup mac-command to communicate this to the devices.
+    uplink_dwell_time_400ms=false
+    downlink_dwell_time_400ms=false
 
     # Rejoin-request configuration (LoRaWAN 1.1)
     [regions.network.rejoin_request]
