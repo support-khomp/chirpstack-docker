@@ -2,7 +2,7 @@ version: "3"
 
 services:
   chirpstack:
-    image: chirpstack/chirpstack:4.4.0
+    image: chirpstack/chirpstack:4.5.1
     command: -c /etc/chirpstack
     restart: unless-stopped
     volumes:
@@ -20,7 +20,7 @@ services:
       - 8080:8080
 
   chirpstack-gateway-bridge:
-    image: chirpstack/chirpstack-gateway-bridge:4.0.9
+    image: chirpstack/chirpstack-gateway-bridge:4.0.10
     restart: unless-stopped
     ports:
       - 1700:1700/udp
