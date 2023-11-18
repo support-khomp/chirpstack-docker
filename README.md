@@ -19,7 +19,12 @@ but keep in mind that for production usage it might need modifications.
 This setup is pre-configured for **AU915** region. 
 
 This setup comes with a ChirpStack Gateway Bridge instance which is configured to the
-au915 topic prefix. You can connect your **ITG 200** UDP packet-forwarder based gateway to **port 1700**.
+**au915_0** topic prefix. You can connect your **ITG 200** UDP packet-forwarder based gateway to **port 1700**.
+
+### Multi-band Region
+
+The multi-band branch has an adicional ChirpStack Gateway Bridge to support the second sub-band of AU915 (channels 8 ..15) and
+**this bridge uses another UDP port (1701)**, therefore, **it is necessary to change the ITG 200 channels in the radio tab and the UDP port in the Network Server tab for it to work correctly**.
 
 # Data persistence
 
